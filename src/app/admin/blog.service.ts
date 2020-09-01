@@ -9,7 +9,7 @@ import { Category } from '../blogpost/category';
 })
 export class BlogService {
 
-  serverUrl = 'https://test.thefutureworkplaces.com/api/post/';
+  serverUrl = 'http://127.0.0.1:8000/api/post/';
 
   constructor(private http: HttpClient) { }
 

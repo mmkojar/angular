@@ -14,7 +14,7 @@ export class AdminDashboardComponent implements OnInit {
   title = 'Manage Users';
   AllUsers: User;
   rolesArray: Array<string> = [];
-  hideOnUser = false;
+  // hideOnUser = false;
 
   constructor(private authService: AuthService, private router: Router) { }
 
@@ -26,7 +26,7 @@ export class AdminDashboardComponent implements OnInit {
         this.rolesArray.push(element.name);
       });
       if (this.rolesArray.indexOf("user") !== -1) {
-        this.hideOnUser = true;
+        // this.hideOnUser = true;
         this.router.navigate(['/admin/blogs']);
       }
     }

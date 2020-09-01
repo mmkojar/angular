@@ -75,7 +75,7 @@ export class ManageCategoriesComponent implements OnInit {
     return this.blogService.addCategory(this.model).subscribe(
       (data: Category) => {
         if (data.status == 'success') {
-          this.getCategory();
+          this.ngOnInit();
           this.model.category_name = '';
           $("#exampleModal").modal('hide');
         }

@@ -13,7 +13,7 @@ import { SharedataService } from '../sharedata.service';
 })
 export class AuthService {
 
-  serverUrl = 'https://test.thefutureworkplaces.com/api/login/';
+  serverUrl = 'http://127.0.0.1:8000/api/login/';
   errorData: {};
 
   httpOptions = {

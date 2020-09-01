@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 })
 export class CmspageService {
 
-  serverUrl = 'https://test.thefutureworkplaces.com/api/post/';
+  serverUrl = 'http://127.0.0.1:8000/api/post/';
   errorData: {};
 
   httpOptions = {

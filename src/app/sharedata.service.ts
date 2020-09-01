@@ -4,13 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SharedataService {
-  
-  showLoader:boolean;
-  get loader():boolean{
+
+  showLoader: boolean;
+  get loader(): boolean {
     return this.showLoader;
   }
-  set loader(val:boolean){
-    this.showLoader=val;
+  set loader(val: boolean) {
+    this.showLoader = val;
   }
   constructor() { }
 }

@@ -10,7 +10,7 @@ import { catchError } from 'rxjs/operators';
 })
 export class BlogpostService {
 
-  serverUrl = 'http://127.0.0.1:8000/api/post/';
+  serverUrl = 'https://test.thefutureworkplaces.com/api/post/';
   errorData: {};
   constructor(private http: HttpClient) { }
 

@@ -13,7 +13,7 @@ export class BlogpostService {
   serverUrl = 'https://test.thefutureworkplaces.com/api/post/';
   errorData: {};
   constructor(private http: HttpClient) { }
-  test.thefutureworkplaces.com
+
 
   getPosts() {
     return this.http.get<Blogpost>(this.serverUrl + 'getPosts').pipe(

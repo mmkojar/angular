@@ -8,7 +8,7 @@ import { SharedataService } from './sharedata.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(public router: Router, private sharedataService: SharedataService) { }
+  constructor(public router: Router, public sharedataService: SharedataService) { }
 
   // loader: boolean;
 

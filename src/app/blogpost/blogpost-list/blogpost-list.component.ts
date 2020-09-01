@@ -12,27 +12,27 @@ import { SharedataService } from '../../sharedata.service';
 export class BlogpostListComponent implements OnInit {
 
   constructor(
-    private titleService:Title,
-    private blogpostService:BlogpostService,
-    private sharedataService:SharedataService
+    private titleService: Title,
+    private blogpostService: BlogpostService,
+    private sharedataService: SharedataService
   ) { }
-  
-  
+
+
   title = 'Blogs';
   blogs: Blogpost;
-  error:{};
+  error: {};
   // this.sharedataService.showLoader;
-  
+
   ngOnInit() {
-    this.sharedataService.loader = true;   
+    this.sharedataService.loader = true;
     this.titleService.setTitle(this.title);
 
     this.blogpostService.getPosts().subscribe(
       (data: Blogpost) => {
-        if(data.status == 'success'){
-          this.sharedataService.loader = false;         
+        if (data.status == 'success') {
+          this.sharedataService.loader = false;
           this.blogs = data.data
-        }        
+        }
       },
       error => this.error = error,
     );

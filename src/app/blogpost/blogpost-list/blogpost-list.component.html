@@ -1,4 +1,3 @@
-
 <section class="blog-list mtb-40">
   <div class="container">
     <h1>{{title}}</h1>
@@ -6,24 +5,25 @@
       <div class="col-md-4" *ngFor="let blog of blogs">
         <div class="single-blog-post mb-4">
           <div class="post-thumbnail">
-            <img src="{{blog.cover_image}}" alt="" height="200" width="200">  
+            <img src="{{blog.cover_image}}" alt="" height="200" width="200">
           </div>
           <div class="post-content">
             <a href="#" class="headline">
               <h3>{{blog.title}}</h3>
             </a>
-            <p>{{(blog.body | slice:0:100)+'...'}}</p>    
+            <p>{{(blog.body | slice:0:100)+'...'}}</p>
             <div class="post-meta">
-            <p><span class="post-author">{{blog.name}}</span> on <span class="post-date">{{blog.created_at}}</span></p>
-            <a [routerLink]="['/blog',blog.id]">Read more...</a>
+              <p><span class="post-author">{{blog.name}}</span> on <span class="post-date">{{blog.created_at}}</span>
+              </p>
+              <a [routerLink]="['/blog',blog.id]">Read more...</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="service-error" *ngIf="error">
+    <!-- <div class="service-error" *ngIf="error">
       <h1>{{error.errorTitle}}</h1>
       <h3>{{error.errorDesc}}</h3>
-    </div>
+    </div> -->
   </div>
 </section>

@@ -7,26 +7,26 @@ import { AuthService } from '../../auth/auth.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  
-  rolesArray :Array<string> = [];
+
+  rolesArray: Array<string> = [];
   hideOnUser = false;
   hideOnAdmin = false;
 
-  constructor(private authService:AuthService) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
     if (this.authService.isLoggedIn()) {
-      const role = this.authService.getUserRoles();         
+      const role = this.authService.getUserRoles();
       role.forEach(element => {
-        this.rolesArray.push(element.name);     
-      });             
-      if(this.rolesArray.indexOf("user") !== -1){
-        this.hideOnUser = true;        
+        this.rolesArray.push(element.name);
+      });
+      if (this.rolesArray.indexOf("user") !== -1) {
+        this.hideOnUser = true;
         this.hideOnAdmin = false;
-      } 
-      if(this.rolesArray.indexOf("admin") !== -1){
+      }
+      if (this.rolesArray.indexOf("admin") !== -1) {
         this.hideOnAdmin = true;
-        this.hideOnUser = false;  
+        this.hideOnUser = false;
       }
     }
   }

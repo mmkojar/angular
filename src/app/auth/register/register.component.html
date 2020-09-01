@@ -3,7 +3,7 @@
         <div class="row justify-content-center" *ngIf="!error">
             <div class="col-md-6">
                 <div class="login-box">
-                    <div [hidden]="!showMsg" class="alert alert-success" >{{successmsg}}</div>
+                    <div [hidden]="!showMsg" class="alert alert-success">{{successmsg}}</div>
                     <h1>Register</h1>
                     <form (ngSubmit)="onSubmit(registerForm)" #registerForm="ngForm">
                         <div class="form-group">
@@ -39,7 +39,7 @@
                                     Password is required.
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
                         <div class="form-group">
                             <button type="submit" [disabled]="registerForm.form.invalid"
                                 class="btn btn-primary">Sign-up</button>
@@ -48,9 +48,9 @@
                 </div>
             </div>
         </div>
-        <div class="service-error" *ngIf="error">
+        <!-- <div class="service-error" *ngIf="error">
             <h1>{{error.errorTitle}}</h1>
             <h3>{{error.errorDesc}}</h3>
-        </div>
+        </div> -->
     </div>
 </section>

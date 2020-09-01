@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 
 export class AuthInterceptor implements HttpInterceptor {
 
-    constructor(private authService: AuthService) {}
+    constructor(private authService: AuthService) { }
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
@@ -17,10 +17,10 @@ export class AuthInterceptor implements HttpInterceptor {
             req = req.clone({
                 setHeaders:
                     { Authorization: `Bearer ${authToken}` }
-                }
+            }
             );
         }
-        
+
         return next.handle(req);
     }
 }

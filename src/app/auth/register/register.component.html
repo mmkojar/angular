@@ -1,0 +1,56 @@
+<section class="login-wrap mtb-40">
+    <div class="container">
+        <div class="row justify-content-center" *ngIf="!error">
+            <div class="col-md-6">
+                <div class="login-box">
+                    <div [hidden]="!showMsg" class="alert alert-success" >{{successmsg}}</div>
+                    <h1>Register</h1>
+                    <form (ngSubmit)="onSubmit(registerForm)" #registerForm="ngForm">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Name"
+                                [(ngModel)]="user.name" #name="ngModel" required>
+                            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+                                <div *ngIf="name.errors.required">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="E-Mail" email
+                                [(ngModel)]="user.email" #email="ngModel" required>
+                            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+                                <div *ngIf="email.errors.required">Email is required.</div>
+                                <div *ngIf="email.errors.email">Email must be a valid email address.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone"
+                                pattern="^(\+\d{1,3}[- ]?)?\d{10}$" [(ngModel)]="user.phone" #phone="ngModel" required>
+                            <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="error">
+                                <div *ngIf="phone.errors.required">Phone No. is required.</div>
+                                <div *ngIf="phone.errors.pattern">Invalid Phone No.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" id="password" class="form-control"
+                                placeholder="Password" [(ngModel)]="user.password" #password="ngModel" required>
+                            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+                                <div *ngIf="password.errors.required">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="form-group">
+                            <button type="submit" [disabled]="registerForm.form.invalid"
+                                class="btn btn-primary">Sign-up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="service-error" *ngIf="error">
+            <h1>{{error.errorTitle}}</h1>
+            <h3>{{error.errorDesc}}</h3>
+        </div>
+    </div>
+</section>

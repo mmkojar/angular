@@ -1,0 +1,53 @@
+<section>
+    <div class="card">
+        <div class="card-header">
+            <h3 [hidden]="hideOnUser">{{title}}</h3>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal"
+                [hidden]="hideOnAdmin">
+                Add Category
+            </button>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let category of categories">{{category.category_name}}
+                    <button class="btn btn-danger float-right" [hidden]="hideOnAdmin" (click)="onDelete(category.id)"><i
+                            class="fas fa-times"></i></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        [hidden]="hideOnAdmin">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form (ngSubmit)="onSubmit()" #categoryForm="ngForm">
+                        <div class="form-group">
+                            <input type="text" name="category_name" id="category_name" [(ngModel)]="model.category_name"
+                                class="form-control" placeholder="Category Name" required #category_name="ngModel">
+                            <div *ngIf="category_name.invalid && (category_name.dirty || category_name.touched)"
+                                class="error">
+                                <div *ngIf="category_name.errors.required">
+                                    Category Name is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button [disabled]="!categoryForm.form.valid" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

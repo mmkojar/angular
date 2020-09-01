@@ -1,0 +1,401 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: 'Varela Round', sans-serif !important;
+    font-size: 0.9rem;
+}
+
+p {
+    color: #8d8d8d;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+}
+
+.bg-blue {
+    background-color: #007EDB;
+}
+
+.navbar-brand img {
+    height: 30px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .active .nav-link {
+    color: #fff;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.blog-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.blog-box h3 {
+    margin: 20px 0;
+    font-size: 22px;
+    color: #000;
+}
+
+.blog-box p {
+    color: #666;
+}
+
+.blog-box span, .posted-on span {
+    font-style: italic;
+    color: #000;
+}
+
+.blog-box img {
+    width: 100%;
+}
+
+.mtb-40 {
+    margin: 40px 0;
+    min-height: 450px;
+}
+
+.banner-box {
+    position: relative;
+}
+
+.intro-text {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    color: #fff;
+}
+
+.intro-text-box {
+    width: 62%;
+    margin: auto;
+    background-color: rgba(96, 96, 96, 0.6);
+    padding: 20px;
+    border: 10px solid #808080;
+}
+
+.intro-text-box h1 {
+    font-size: 3em;
+}
+
+.blog-right h3 {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 20px;
+}
+
+.detail-img {
+    margin: 40px 0px;
+}
+
+.rb-box-img {
+    margin-right: 15px;
+}
+
+.rb-box-img img {
+    width: 100px;
+}
+
+.rb-box {
+    display: flex;
+}
+
+.rb-box-desc h4 {
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+}
+
+.rb-box-desc p {
+    color: #666;
+}
+
+.rb-box {
+    margin-bottom: 10px;
+}
+
+.recent-post a:hover {
+    text-decoration: none;
+}
+
+.recent-post a:hover h4 {
+    color: #007EDB;
+}
+
+.categories {
+    margin-top: 20px;
+}
+
+.categories ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.categories ul li {
+    border-bottom: 1px dotted #ccc;
+    padding: 5px 0px;
+}
+
+.categories ul li a {
+    color: #333;
+    display: block;
+}
+
+.categories ul li a:hover {
+    color: #007EDB;
+    text-decoration: none;
+}
+
+.body-content {
+    min-height: 380px;
+}
+
+.error-404 {
+    text-align: center;
+}
+
+.error-404 h1 {
+    font-size: 10em;
+}
+
+.service-error {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.service-error h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #007EDA;
+}
+
+/*Admin*/
+
+.login-box {
+    box-shadow: 1px 1px 7px #666;
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.login-box h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.dash-left ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.dash-left ul li {
+    background-color: #f1f1f1;
+    margin-bottom: 5px;
+}
+
+.dash-left ul li a {
+    color: #333;
+    padding: 5px 15px;
+    display: block;
+}
+
+.dash-left ul li:hover a {
+    background-color: #007EDB;
+    text-decoration: none;
+    color: #fff;
+}
+
+.dash-left ul li a.active {
+    background-color: #007EDB;
+    color: #fff;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table img {
+    width: 80px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+/*validation*/
+
+.ng-touched[required], .ng-touched.required {
+    border: 1px solid red
+}
+
+.ng-valid[required], .ng-valid.required {
+    border: 1px solid #42A948;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.success {
+    color: green;
+}
+
+.contact-message {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .intro-text {
+        display: none;
+    }
+}
+
+.single-blog-post {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    /* margin-bottom: 5px; */
+    /* width: 350px; */
+    /* min-height: 400px; */
+}
+
+.single-blog-post .post-thumbnail {
+    position: relative;
+    z-index: 1;
+}
+
+.single-blog-post .post-thumbnail img {
+    width: 100%;
+}
+
+.single-blog-post .post-content {
+    padding: 20px 30px;
+}
+
+.single-blog-post .post-content p {
+    margin-bottom: 20px;
+}
+
+.single-blog-post .post-content .post-meta p {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.single-blog-post .post-content .post-meta p a {
+    font-size: 12px;
+}
+
+.single-blog-post.post-style-2 .post-thumbnail {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 97px;
+    flex: 0 0 97px;
+    min-width: 97px;
+    margin-right: 15px;
+}
+
+.single-blog-post .post-thumbnail {
+    position: relative;
+    z-index: 1;
+}
+
+.single-blog-post .post-thumbnail img {
+    width: 100%;
+    min-height: 90px;
+}
+
+.single-blog-post.post-style-2 .post-content {
+    padding: 5px 30px 5px 5px;
+}
+
+.single-blog-post.post-style-2 .post-content .headline h5 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.single-blog-content .post-meta {
+    border-bottom: 2px solid;
+    border-color: #f1f1f1;
+    margin-bottom: 30px;
+}
+
+.single-blog-content .post-meta p {
+    margin-bottom: 0;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.single-blog-content .post-meta p a {
+    font-size: 14px;
+}
+
+.single-blog-content .post-content {
+    padding: 60px 55px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.single-blog-content .post-content h6 {
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #8d8d8d;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.single-blog-content .post-meta.second-part {
+    border-bottom: none;
+    border-top: 2px solid;
+    border-color: #f1f1f1;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+
+.post-sidebar-area {
+    border-left: 2px solid #f1f1f1;
+}
+
+.sidebar-widget-area {
+    position: relative;
+    z-index: 1;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.sidebar-widget-area .widget-content {
+    padding: 30px 0 30px 30px;
+}
+
+.sidebar-widget-area .title {
+    display: block;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 0;
+    margin-right: auto;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    padding: 12px 0;
+    border-bottom: 2px solid #f1f1f1;
+    padding-left: 30px;
+}

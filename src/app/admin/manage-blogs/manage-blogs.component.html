@@ -1,0 +1,70 @@
+<section [hidden]="hideOnAdmin">
+  <div class="card">
+    <div class="card-header">
+      <a [routerLink]="['/admin/blogs/create']" class="btn btn-success">Add Post</a>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <tr>
+            <th>Id</th>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Created At</th>
+            <th>Action</th>
+          </tr>
+          <tr *ngFor="let blog of adminblogId">
+            <td>{{blog.id}}</td>
+            <td><img src="{{blog.cover_image}}"></td>
+            <td>{{blog.title}}</td>
+            <td>{{blog.category_name}}</td>
+            <td>{{blog.created_at | date: 'mediumDate'}}</td>
+            <td class="action">
+              <a [routerLink]="['/admin/blogs/edit', blog.id]" class="btn btn-info btn-sm mr-2"><i
+                  class="fas fa-edit"></i></a>
+              <a (click)="onDelete(blog.id)" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section [hidden]="hideOnUser">
+  <div class="card">
+    <div class="card-header">
+      <h3>{{title}}</h3>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <tr>
+            <th>Id</th>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Created At</th>
+            <th>Created By</th>
+            <th>Action</th>
+          </tr>
+          <tr *ngFor="let blog of adminblog">
+            <td>{{blog.id}}</td>
+            <td><img src="{{blog.cover_image}}"></td>
+            <td>{{blog.title}}</td>
+            <td>{{blog.category_name}}</td>
+            <td>{{blog.created_at | date: 'mediumDate'}}</td>
+            <td>{{blog.name}}</td>
+            <td class="action">
+              <a [routerLink]="['/admin/blogs/edit', blog.id]" class="btn btn-info btn-sm mr-2"><i
+                  class="fas fa-edit"></i></a>
+              <a (click)="onDelete(blog.id)" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</section>

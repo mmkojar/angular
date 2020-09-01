@@ -1,0 +1,55 @@
+<section class="blog-detail mtb-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+
+        <div class="single-blog-content mb-4" *ngFor="let blog of blogs">
+          <div class="post-meta">
+            <h3>{{blog.title}}</h3>
+            <p><span class="post-author">{{blog.name}}</span>
+              <i class="fas fa-arrow-right mx-2"></i>
+              <small>{{blog.category_name}}</small>
+              <br>
+              <span class="post-date">{{blog.created_at | date:'mediumDate'}}</span>
+            </p>
+          </div>
+          <div class="post-content">
+            <img src="{{blog.cover_image}}" alt="" height="500" width="500">
+            <h6 innerHTML="{{blog.body}}"></h6>
+            <div class="post-meta second-part">
+              <p><span class="post-author">{{blog.name}}</span>
+                <i class="fas fa-arrow-right mx-2"></i>
+                <small>{{blog.category_name}}</small>
+                <br>
+                <span class="post-date">{{blog.created_at | date:'mediumDate'}}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- <ng-template #loading>
+          <div class="service-error">
+              <h3>Error loading of the blog detail. Please try again later.</h3>
+          </div>
+      </ng-template> -->
+      </div>
+      <div class="col-md-4">
+        <div class="post-sidebar-area mb-100">
+          <app-blogpost-recent></app-blogpost-recent>
+          <app-categories></app-categories>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div class="blog-left" *ngFor="let blog of blogs">
+  <h1>{{blog.title}}</h1>
+  <div class="posted-on">
+      <p>by <span>{{blog.name}}</span> on <span>{{blog.created_at | date:'mediumDate'}}</span></p>
+  </div>
+  <div class="detail-img">
+     <img src="assets/images/{{blog.cover_image}}" alt="{{blog.title}}" />
+  </div>
+  <div class="blog-desc" innerHTML="{{blog.body}}">
+  </div>
+</div> -->

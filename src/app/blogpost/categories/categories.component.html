@@ -1,0 +1,13 @@
+<div class="right-widget">
+  <div class="sidebar-widget-area">
+    <h5 class="title">Categories</h5>
+    <div class="widget-content">
+      <ul>
+        <li *ngFor="let category of categories">
+          <a></a>
+          <a [routerLink]="['/blog','category',category.id]">{{category.category_name}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

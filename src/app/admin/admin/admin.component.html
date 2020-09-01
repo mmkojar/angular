@@ -1,0 +1,27 @@
+<section class="dashboard-wrap mtb-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="dash-left">
+                    <ul>
+                        <li [hidden]="hideOnUser"><a routerLink="./" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{ exact: true }">Dashboard</a></li>
+                        <li [hidden]="hideOnAdmin"><a routerLink="./blogs" routerLinkActive="active">My Blogs</a></li>
+                        <li><a routerLink="./categories" routerLinkActive="active">Categories</a>
+                        </li>
+                        <li [hidden]="hideOnUser"><a routerLink="./blogs" routerLinkActive="active">User Blogs</a></li>
+                        <!-- <li [hidden]="hideOnUser"><a routerLink="./categories" routerLinkActive="active">Categories</a></li> -->
+                        <!-- <li [hidden]="hideOnUser"><a routerLink="./pages" routerLinkActive="active">Pages</a></li> -->
+                        <li><a routerLink="./profile" routerLinkActive="active">Profile</a></li>
+                        <li><a [routerLink]="['/login']">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="dash-right">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

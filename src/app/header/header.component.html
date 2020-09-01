@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/" (click)="setPagetitle('Blogger')">
+      Blog App
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="setPagetitle('Blogger')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/page/about" routerLinkActive="active"
+            (click)="setPagetitle('About Us')">About</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/page/services" routerLinkActive="active" (click)="setPagetitle('Services')">Services</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contact" routerLinkActive="active"
+            (click)="setPagetitle('Contact')">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/blog" routerLinkActive="active">Blog</a>
+        </li>
+      </ul>
+      <h5 class="text-white mt-2 mr-2" *ngIf="isLoggedIn">Welcome ! {{getLoginUsername}}</h5>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a routerLink="/login" class="nav-link">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a class="nav-link" routerLink="/register" (click)="setPagetitle('Register')">Register</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a routerLink="/admin" class="nav-link" (click)="setPagetitle('Dashboard')">Dashboard</a>
+        </li>
+        <!-- <li class="nav-item" *ngIf="isLoggedIn" [hidden]="hideOnAdmin">
+          <a routerLink="/admin/blogs" class="nav-link" (click)="setPagetitle('User Dashboard')">Dashboard</a>
+        </li> -->
+        <!--  <li class="nav-item" *ngIf="isLoggedIn">
+          <a routerLink="/login" class="nav-link">Logout</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>

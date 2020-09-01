@@ -1,0 +1,25 @@
+
+<section>    
+    <div class="col-md-6">
+        <div class="card">
+        <div class="card-header">Edit {{getusername}}</div>
+            <div class="card-body">
+                <form [formGroup]="userForm" (ngSubmit)="onSubmit()">        
+                        <!-- <div class="form-group" *ngFor="let role of getroles; let i = index">
+                            <input type="checkbox" formArrayName="roles"  (change)="onChange(role.id, $event.target.checked)" [checked]='getselectedrole.indexOf(role.id) != -1' [value]="role.id" class="mr-2">
+                            <label>{{role.name}}</label>
+                        </div> -->
+                        <div class="form-group">
+                                <label class="mr-5">Is Active</label>
+                                <input type="radio" formControlName="isActive" value="1" class="my-1"/> <span class="mx-2">Yes</span>
+                                <input type="radio" formControlName="isActive" value="0" class="my-1"/> <span class="mx-2">No</span>
+                        </div>
+                        <div class="form-group mb-0">
+                            <input type="hidden" formControlName="id">
+                            <button type="submit" [disabled]="!userForm.valid" class="btn btn-primary">Save</button>
+                        </div>                        
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

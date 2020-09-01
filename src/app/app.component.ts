@@ -10,9 +10,9 @@ import { SharedataService } from './sharedata.service';
 export class AppComponent {
   constructor(public router: Router, public sharedataService: SharedataService) { }
 
-  // loader: boolean;
+  loader: boolean;
 
   ngOnInit() {
-    // this.sharedataService.loader = this.loader;
+    this.sharedataService.loader = this.loader;
   }
 }
